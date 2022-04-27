@@ -1,0 +1,23 @@
+---
+networks:
+  default:
+    name: mongodb_network
+services:
+  mongo-express:
+    container_name: mongo-express
+    environment:
+    - ME_CONFIG_MONGODB_SERVER=mongodb
+    image: mongo-express
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - "data:/data"
+version: "3.8"
+volumes:
+  data: {}
