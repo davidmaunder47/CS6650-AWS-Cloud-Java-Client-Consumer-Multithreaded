@@ -2,7 +2,7 @@ This project was designed to transfer API Requests from a client to a Amazon Dat
 
 AWS SQL Server
 
-Custom configured EC2 instances 
+Custom configured EC2 instances with Tomcat
 
 Autoscaler
 
